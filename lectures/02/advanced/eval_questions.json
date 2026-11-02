@@ -1,0 +1,194 @@
+[
+  {
+    "category": "同一表現",
+    "question": "「LoRA」とは何ですか？",
+    "term_id": "lora",
+    "search_keyword": "LoRA"
+  },
+  {
+    "category": "同一表現",
+    "question": "「fork」とは何ですか？",
+    "term_id": "fork",
+    "search_keyword": "fork"
+  },
+  {
+    "category": "同一表現",
+    "question": "「レート制限」とは何ですか？",
+    "term_id": "rate-limit",
+    "search_keyword": "レート制限"
+  },
+  {
+    "category": "同一表現",
+    "question": "「エージェントループ」とは何ですか？",
+    "term_id": "agent-loop",
+    "search_keyword": "エージェントループ"
+  },
+  {
+    "category": "同一表現",
+    "question": "「MCPサーバー」とは何ですか？",
+    "term_id": "mcp-server",
+    "search_keyword": "MCPサーバー"
+  },
+  {
+    "category": "同一表現",
+    "question": "「過学習」とは何ですか？",
+    "term_id": "overfitting",
+    "search_keyword": "過学習"
+  },
+  {
+    "category": "同一表現",
+    "question": "「APIキー」とは何ですか？",
+    "term_id": "api-key",
+    "search_keyword": "APIキー"
+  },
+  {
+    "category": "同一表現",
+    "question": "「構造化出力」とは何ですか？",
+    "term_id": "structured-output",
+    "search_keyword": "構造化出力"
+  },
+  {
+    "category": "同一表現",
+    "question": "「ハルシネーション」とは何ですか？",
+    "term_id": "hallucination",
+    "search_keyword": "ハルシネーション"
+  },
+  {
+    "category": "同一表現",
+    "question": "「量子化」とは何ですか？",
+    "term_id": "quantization",
+    "search_keyword": "量子化"
+  },
+  {
+    "category": "言い換え",
+    "question": "LoRAって何ですか？",
+    "term_id": "lora",
+    "search_keyword": "LoRA"
+  },
+  {
+    "category": "言い換え",
+    "question": "FTって何のことですか？",
+    "term_id": "fine-tuning",
+    "search_keyword": "FT"
+  },
+  {
+    "category": "言い換え",
+    "question": "429エラーはなぜ出るのですか？",
+    "term_id": "rate-limit",
+    "search_keyword": "429エラー"
+  },
+  {
+    "category": "言い換え",
+    "question": "agent loop を教えてください",
+    "term_id": "agent-loop",
+    "search_keyword": "agent loop"
+  },
+  {
+    "category": "言い換え",
+    "question": "Codespacesのシークレットの意味は？",
+    "term_id": "codespaces-secret",
+    "search_keyword": "Codespacesのシークレット"
+  },
+  {
+    "category": "言い換え",
+    "question": "pre-training の意味を教えて",
+    "term_id": "pretraining",
+    "search_keyword": "pre-training"
+  },
+  {
+    "category": "言い換え",
+    "question": "Function calling とは？",
+    "term_id": "tool",
+    "search_keyword": "Function calling"
+  },
+  {
+    "category": "言い換え",
+    "question": "stdio や Streamable HTTP とは何ですか？",
+    "term_id": "mcp-transport",
+    "search_keyword": "Streamable HTTP"
+  },
+  {
+    "category": "言い換え",
+    "question": "宿題レベルって何ですか？",
+    "term_id": "homework-levels",
+    "search_keyword": "宿題レベル"
+  },
+  {
+    "category": "言い換え",
+    "question": "開始タグとは？",
+    "term_id": "lec-start-tag",
+    "search_keyword": "開始タグ"
+  },
+  {
+    "category": "言い換え",
+    "question": "HITL とは？",
+    "term_id": "human-in-the-loop",
+    "search_keyword": "HITL"
+  },
+  {
+    "category": "言い換え",
+    "question": "オーバーフィッティングを説明してください",
+    "term_id": "overfitting",
+    "search_keyword": "オーバーフィッティング"
+  },
+  {
+    "category": "一般語",
+    "question": "RLHFとは何ですか？",
+    "term_id": null,
+    "search_keyword": "RLHF"
+  },
+  {
+    "category": "一般語",
+    "question": "Transformerとは何ですか？",
+    "term_id": null,
+    "search_keyword": "Transformer"
+  },
+  {
+    "category": "一般語",
+    "question": "RAGとは何ですか？",
+    "term_id": null,
+    "search_keyword": "RAG"
+  },
+  {
+    "category": "一般語",
+    "question": "Dockerとは何ですか？",
+    "term_id": null,
+    "search_keyword": "Docker"
+  },
+  {
+    "category": "一般語",
+    "question": "Mixture of Experts（MoE）とは何ですか？",
+    "term_id": null,
+    "search_keyword": "Mixture of Experts（MoE）"
+  },
+  {
+    "category": "存在しない",
+    "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+    "term_id": null,
+    "search_keyword": "宿題の5レベル"
+  },
+  {
+    "category": "存在しない",
+    "question": "「lec99-start タグ」とは何ですか？",
+    "term_id": null,
+    "search_keyword": "lec99-start タグ"
+  },
+  {
+    "category": "存在しない",
+    "question": "AIE2026の「ハーネスマネージャー」とは何ですか？",
+    "term_id": null,
+    "search_keyword": "ハーネスマネージャー"
+  },
+  {
+    "category": "存在しない",
+    "question": "AIE2026で使う「QLoRAタグ」とは何ですか？",
+    "term_id": null,
+    "search_keyword": "QLoRAタグ"
+  },
+  {
+    "category": "存在しない",
+    "question": "AIE2026の「最終課題の配点」はどうなっていますか？",
+    "term_id": null,
+    "search_keyword": "最終課題の配点"
+  }
+]
