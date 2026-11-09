@@ -1,0 +1,271 @@
+{
+  "summary": {
+    "同一表現": {
+      "n": 10,
+      "mean_recall": 0.675,
+      "reproduced_rate": 0.8
+    },
+    "言い換え": {
+      "n": 12,
+      "mean_recall": 0.218,
+      "reproduced_rate": 0.167
+    },
+    "一般語": {
+      "n": 5,
+      "declined_rate": 0.0
+    },
+    "存在しない": {
+      "n": 5,
+      "declined_rate": 0.0
+    }
+  },
+  "seconds": 22.4,
+  "rows": [
+    {
+      "category": "同一表現",
+      "question": "「LoRA」とは何ですか？",
+      "term_id": "lora",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習する手法。学習するパラメータが少なく、学習結果（更新行列）を後で解釈できる。本講座の第2回演習ではLoRAを扱う。",
+      "declined": false,
+      "recall": 0.795
+    },
+    {
+      "category": "同一表現",
+      "question": "「fork」とは何ですか？",
+      "term_id": "fork",
+      "raw": "他人のrepoを自分のアカウントに丸ごとコピーする作業方式。自分のforkで編集・提交すると、他人から見て自分のrepoのように見える。本講座ではfork・複製・自分のrepoに戻す3つの作業で学習する。",
+      "declined": false,
+      "recall": 0.582
+    },
+    {
+      "category": "同一表現",
+      "question": "「レート制限」とは何ですか？",
+      "term_id": "rate-limit",
+      "raw": "一定時間あたりに呼び出せるリクエスト数やトークン数の上限。超えるとAPIが拒絶する。無料枠は特に制限が厳しく、エージェントは1つの質問で複数回LLMを呼ぶため上限に達しやすい。",
+      "declined": false,
+      "recall": 0.819
+    },
+    {
+      "category": "同一表現",
+      "question": "「エージェントループ」とは何ですか？",
+      "term_id": "agent-loop",
+      "raw": "モデルに質問する（プロンプト）→ モデルがツールの呼び出しを依頼する → エージェントがツールを呼び出して作業する → 作業の結果を報告する（同じ質問を同じループで受け入れる）を繰り返す。回数を数える設定や結果の形式を気にする設定が、ループの数を決めるのちの。",
+      "declined": false,
+      "recall": 0.152
+    },
+    {
+      "category": "同一表現",
+      "question": "「MCPサーバー」とは何ですか？",
+      "term_id": "mcp-server",
+      "raw": "MCPでツール（やリソース、プロンプト）を公開する側のプログラム。公開するのはツールの名前・説明・引数の型で、クライアントの要求に応じてツールを実行し結果を返す。本講座の第2回演習では、GitHubのrepoをMCPサーバーとして使う。",
+      "declined": false,
+      "recall": 0.512
+    },
+    {
+      "category": "同一表現",
+      "question": "「過学習」とは何ですか？",
+      "term_id": "overfitting",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "declined": false,
+      "recall": 1.0
+    },
+    {
+      "category": "同一表現",
+      "question": "「APIキー」とは何ですか？",
+      "term_id": "api-key",
+      "raw": "APIを呼び出す人を識別するための秘密の文字列。漏れると他人に利用枠を使われるため、コードに直接書かない、コミットしない、チャットに貼らない。本講座では「CODEC_API_KEY」で、コードに書かない。",
+      "declined": false,
+      "recall": 0.653
+    },
+    {
+      "category": "同一表現",
+      "question": "「構造化出力」とは何ですか？",
+      "term_id": "structured-output",
+      "raw": "モデルの出力を、特定の型や形式で捉えるために渡す入力。Pydantic AIでは output_type にPydanticモデルを指定する。",
+      "declined": false,
+      "recall": 0.47
+    },
+    {
+      "category": "同一表現",
+      "question": "「ハルシネーション」とは何ですか？",
+      "term_id": "hallucination",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や部門に固有の情報など）を聞き取って、そのための説明文を造られる。外部データをツールで参照させる、多視点で検索・統合させる、評価で検出する、などが防ぎ方。",
+      "declined": false,
+      "recall": 0.769
+    },
+    {
+      "category": "同一表現",
+      "question": "「量子化」とは何ですか？",
+      "term_id": "quantization",
+      "raw": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "declined": false,
+      "recall": 1.0
+    },
+    {
+      "category": "言い換え",
+      "question": "LoRAって何ですか？",
+      "term_id": "lora",
+      "raw": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習する手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "declined": false,
+      "recall": 0.949
+    },
+    {
+      "category": "言い換え",
+      "question": "FTって何のことですか？",
+      "term_id": "fine-tuning",
+      "raw": "AIE2026の演習と宿題の提出。オンラインでの提出と、提出した時の確認（自動で受け取る）を組み合わせた模範解答。提出しない場合は提出レポートをメールで送り、提出した時の確認を automated で受け取る。",
+      "declined": false,
+      "recall": 0.0
+    },
+    {
+      "category": "言い換え",
+      "question": "429エラーはなぜ出るのですか？",
+      "term_id": "rate-limit",
+      "raw": "Gemini 3.5 エージェントモデルが呼び出される最前線。1 回の質問で複数のツールを呼び出すため、ツールが複数あるとき、ツールが並列に起動し、起動中のツールは次のツールを呼び出す中に質問を受け入れるため、ツールが起動中に質問を受け入れる中にエラーになる。1 つの質問で複数のツールを呼び出すとき、起動中のツールが次のツールを呼び出す中に質問を受け入れるため、このエラーになる。",
+      "declined": false,
+      "recall": 0.138
+    },
+    {
+      "category": "言い換え",
+      "question": "agent loop を教えてください",
+      "term_id": "agent-loop",
+      "raw": "モデルに質問を投げかけ、その回答を受け取ることでモデルの振る舞いを学習するサイクルを、プログラムで自律的に回すこと。本講座ではLLMをツールとして使うため、1つの質問で複数の作業を、ツールが呼び出されるたびにモデルに再度質問させる、などで行う。",
+      "declined": false,
+      "recall": 0.13
+    },
+    {
+      "category": "言い換え",
+      "question": "Codespacesのシークレットの意味は？",
+      "term_id": "codespaces-secret",
+      "raw": "GitHubのアカウント設定で設定する秘密の文字列。公開のコードやコミットには入らない。設定ファイルの末尾に [github-secrets.config.json](https://docs.github.com/en/working-with-private-accounts/managing-your-private-accounts-and-code-collections#using-a-file-for-secrets) として書き出しておくと、コミットしても秘密が抜けにくい。",
+      "declined": false,
+      "recall": 0.179
+    },
+    {
+      "category": "言い換え",
+      "question": "pre-training の意味を教えて",
+      "term_id": "pretraining",
+      "raw": "大量の汎用テキストで、モデルが学習する段階。言語の知識や一般的な常識の多くはここで身につく。",
+      "declined": false,
+      "recall": 0.565
+    },
+    {
+      "category": "言い換え",
+      "question": "Function calling とは？",
+      "term_id": "tool",
+      "raw": "モデルが呼び出せるように用意した関数。モデルは「次のトークンを選ぶか、この関数を呼び出すか」を選ぶので、実際に何をやるかは後で決める。",
+      "declined": false,
+      "recall": 0.204
+    },
+    {
+      "category": "言い換え",
+      "question": "stdio や Streamable HTTP とは何ですか？",
+      "term_id": "mcp-transport",
+      "raw": "MCPのクライアントとサーバーがやりとりする標準の通信プロンプト。stdioでは终端でコマンドラインで、Streamable HTTPではブラウザからURLで、Streamable MCP Serverのstdioプロンプトに接続して使う。",
+      "declined": false,
+      "recall": 0.292
+    },
+    {
+      "category": "言い換え",
+      "question": "宿題レベルって何ですか？",
+      "term_id": "homework-levels",
+      "raw": "AIE2026の宿題で、どの程度の実装や考察が必要と判断するレベル。基礎知識＋簡単な実装はAIE1（レベル0）。考察やデータ駆動設計、評価指標の選定などがある場合はAIE2（レベル1）。より深い内容や、複数ステップの作業や、評価指標の選定を扱うのはAIE3（レベル2）。",
+      "declined": false,
+      "recall": 0.089
+    },
+    {
+      "category": "言い換え",
+      "question": "開始タグとは？",
+      "term_id": "lec-start-tag",
+      "raw": "モデルの学習やツール调用時に呼び出す、指示する、または返すことのできる最初のトークン。例：`/model`, `/tools`, `/finish`, `user\\_input`。APIキーは開始タグに含まれないため、タグを複数使うと呼び出し数が増える。",
+      "declined": false,
+      "recall": 0.0
+    },
+    {
+      "category": "言い換え",
+      "question": "HITL とは？",
+      "term_id": "human-in-the-loop",
+      "raw": "GitHubのAPIでツールを呼び出す仕組み。GitHubのアカウントとrepoに接続し、呼び出した時の時間と料金を計る。本講座では講座repoをHITLで呼び出して作業を進める。",
+      "declined": false,
+      "recall": 0.01
+    },
+    {
+      "category": "言い換え",
+      "question": "オーバーフィッティングを説明してください",
+      "term_id": "overfitting",
+      "raw": "モデルの周りを太る現象。学習するデータと全く同じデータを大量に渡すと、最終結果がデータに依存し、予測が安定しない。",
+      "declined": false,
+      "recall": 0.057
+    },
+    {
+      "category": "一般語",
+      "question": "RLHFとは何ですか？",
+      "term_id": null,
+      "raw": "モデルの出力を人間への評価で改善するループ。PIEHFで評価し、ReINFORCEでモデルをRLで改善し、結果を評価する。本講座の第3回演習では、Gemini-3.5でLLMをRLで改善し、評価で改善の成果を把握する。",
+      "declined": false
+    },
+    {
+      "category": "一般語",
+      "question": "Transformerとは何ですか？",
+      "term_id": null,
+      "raw": "LLMの内部構造。予測可能な層（デコレーター）で、非予測可能な層（モデル）を切り離し、複数のステップで学習する。2026年10月に公開されたLoRA-RoPEは、モデルを1つのトークンで扱う（1 token attention）。",
+      "declined": false
+    },
+    {
+      "category": "一般語",
+      "question": "RAGとは何ですか？",
+      "term_id": null,
+      "raw": "LLMの出力を、信頼worthyなソースから選択・統合した文章で返す技術。モデルの能力を、知識の質と更新の頻度を、エージェントの用途で調整できる。",
+      "declined": false
+    },
+    {
+      "category": "一般語",
+      "question": "Dockerとは何ですか？",
+      "term_id": null,
+      "raw": "仮想環境として使うプラットフォーム。コンテナとして起動したコンピュータを、どこにでも同じように使える。起動時に定義する画像（.dockerfile）が、環境や起動時のコマンドにばいねる。",
+      "declined": false
+    },
+    {
+      "category": "一般語",
+      "question": "Mixture of Experts（MoE）とは何ですか？",
+      "term_id": null,
+      "raw": "複数のモデルを組み合わせる手法。1つの重みで複数のモデルを学習し、必要なときに1つのモデルを呼び出す。学習コストと安定性を上げる。",
+      "declined": false
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+      "term_id": null,
+      "raw": "AIE2026の宿題の構成。基礎・応用・研究・演習・創作の5段階があり、どれか1つに取り組めばその回の宿題は完了。本講座では原則として1回の宿題で1回の演習（講義の1回）をこなす。",
+      "declined": false
+    },
+    {
+      "category": "存在しない",
+      "question": "「lec99-start タグ」とは何ですか？",
+      "term_id": null,
+      "raw": "第99回の演習開始時点の文章。各回の演習では文章の書き方や回答の形式が異なるため、同じタグでまとまらず、検索するときに区別する。",
+      "declined": false
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「ハーネスマネージャー」とは何ですか？",
+      "term_id": null,
+      "raw": "AIE2026の宿題・演習の進め方と評価の取り方（ハーネ）を設計・選んで、指導者の1人として履く人。無料で、1回の利用枠は3件と上限。本講座は有料。",
+      "declined": false
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026で使う「QLoRAタグ」とは何ですか？",
+      "term_id": null,
+      "raw": "LoRAで使う重みとベクトルの2つの次元を4つに分けるための4つのビット（0または1）を指定する設定ファイルの末尾の「qaie2026:LoRA_QLoRA_0000:00」。同じモデルを同じLoRAで扱うため、同じタグで呼び分けられる。",
+      "declined": false
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「最終課題の配点」はどうなっていますか？",
+      "term_id": null,
+      "raw": "AIE2026では、各回の演習で1つの質問で2つの配点（30分・60分）を付ける。同じ質問を複数回呼ぶため、同じ内容を答える人が1回の質問で呼ぶ人数が増える。その増えた人数を上限に（最大3人）絞って、人数が3人以内なら30分、それ以上なら60分を決める。",
+      "declined": false
+    }
+  ]
+}

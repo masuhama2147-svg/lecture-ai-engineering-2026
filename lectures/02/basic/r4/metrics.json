@@ -1,0 +1,73 @@
+{
+  "device": "mps",
+  "machine": "arm64 / macOS-26.2-arm64-arm-64bit",
+  "train_seconds": 80,
+  "global_step": 40,
+  "epoch": 20.0,
+  "final_train_loss": 0.012998074293136597,
+  "mean_train_loss": 0.4117413584142923,
+  "valid_loss_after_training": 0.13912545144557953,
+  "trainable_params": "trainable params: 1,597,440 || all params: 753,990,464 || trainable%: 0.2119",
+  "log_history": [
+    {
+      "loss": 1.537242603302002,
+      "grad_norm": 4.134712219238281,
+      "learning_rate": 0.00019618256431728194,
+      "entropy": 1.8206584006547928,
+      "num_tokens": 17860.0,
+      "mean_token_accuracy": 0.6903413504362106,
+      "epoch": 5.0,
+      "step": 10
+    },
+    {
+      "loss": 0.08053508400917053,
+      "grad_norm": 0.5574365258216858,
+      "learning_rate": 0.00013612416661871533,
+      "entropy": 0.1624279461801052,
+      "num_tokens": 35720.0,
+      "mean_token_accuracy": 0.9845437347888947,
+      "epoch": 10.0,
+      "step": 20
+    },
+    {
+      "loss": 0.01618967205286026,
+      "grad_norm": 0.5797016024589539,
+      "learning_rate": 4.735678371226441e-05,
+      "entropy": 0.03452711692079902,
+      "num_tokens": 53580.0,
+      "mean_token_accuracy": 0.996212437748909,
+      "epoch": 15.0,
+      "step": 30
+    },
+    {
+      "loss": 0.012998074293136597,
+      "grad_norm": 0.3886605501174927,
+      "learning_rate": 4.2658237049655323e-07,
+      "entropy": 0.023942762240767478,
+      "num_tokens": 71440.0,
+      "mean_token_accuracy": 0.9962587058544159,
+      "epoch": 20.0,
+      "step": 40
+    },
+    {
+      "train_runtime": 79.5458,
+      "train_samples_per_second": 3.52,
+      "train_steps_per_second": 0.503,
+      "total_flos": 219299076979968.0,
+      "train_loss": 0.4117413584142923,
+      "epoch": 20.0,
+      "step": 40
+    },
+    {
+      "eval_loss": 0.13912545144557953,
+      "eval_runtime": 0.5536,
+      "eval_samples_per_second": 12.646,
+      "eval_steps_per_second": 1.807,
+      "eval_entropy": 0.05734701082110405,
+      "eval_num_tokens": 71440.0,
+      "eval_mean_token_accuracy": 0.9797979593276978,
+      "epoch": 20.0,
+      "step": 40
+    }
+  ]
+}
