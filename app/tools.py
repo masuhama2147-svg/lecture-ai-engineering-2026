@@ -5,10 +5,13 @@
 """
 
 import json
+import random
+from datetime import date
 from functools import cache
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+LOG_DIR = Path(__file__).resolve().parent.parent / "learning_log"  # .gitignore 済み（共有しない）
 MAX_RESULTS = 3
 
 
@@ -77,3 +80,37 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"第{lecture}回の要点はまだありません。用意されている回: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+
+def make_quiz(lecture: int) -> str:
+    """指定した回（1始まりの整数）の用語から、確認問題を1問作って返す。
+
+    「第2回の確認問題を出して」「クイズを出して」のように、利用者が学習内容を
+    確かめる問題を求めたときに使う。返り値の question を利用者に出題する。
+    answer は利用者が答えたあとの解説に使い、出題と同時には見せない。
+    """
+    glossary = load_glossary()
+    terms = [e for e in glossary if e["lecture"] == lecture]
+    if not terms:
+        available = sorted({e["lecture"] for e in glossary})
+        return f"第{lecture}回の用語は用語集にありません。用語がある回: {', '.join(map(str, available))}"
+    entry = random.choice(terms)
+    return json.dumps(
+        {"question": f"「{entry['term']}」の意味は？", "answer": entry["definition"]},
+        ensure_ascii=False,
+    )
+
+
+def save_learning_log(topic: str, note: str) -> str:
+    """学習の記録を learning_log/ フォルダのファイルに1件追記して保存する。
+
+    「今日の学習を記録して」「学んだことをメモして」のように、利用者が学習の
+    記録を残すよう頼んだときに使う。topic は学んだ内容の見出し、note は本文。
+    ファイルに書き込む操作なので、実行の前に利用者の承認が必要（承認されるまで保存されない）。
+    """
+    LOG_DIR.mkdir(exist_ok=True)
+    path = LOG_DIR / f"{date.today().isoformat()}.md"
+    heading = " ".join(topic.split())  # 見出しは1行にする
+    with path.open("a", encoding="utf-8") as f:
+        f.write(f"## {heading}\n\n{note.strip()}\n\n")
+    return f"保存しました: {path.relative_to(LOG_DIR.parent)}"

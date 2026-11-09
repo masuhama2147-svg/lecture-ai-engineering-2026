@@ -16,7 +16,7 @@ import inspect
 import json
 from pathlib import Path
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, DeferredToolRequests, DeferredToolResults, ToolDenied
 from pydantic_ai.exceptions import ModelHTTPError
 from fastmcp import Client
 from pydantic_ai.mcp import MCPToolset, StdioTransport
@@ -38,11 +38,14 @@ INSTRUCTIONS = """\
 """
 
 # モデルは実行時に渡す（テストではAPIを呼ばない TestModel に差し替えるため）
-agent = Agent(instructions=INSTRUCTIONS)
+# output_type に DeferredToolRequests を加えるのは、承認が必要なツール（requires_approval=True）が
+# 呼ばれたとき、実行せずに「承認待ち」を結果として受け取るため（加えないとエラーになる）
+agent = Agent(instructions=INSTRUCTIONS, output_type=[str, DeferredToolRequests])
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
-
-# TODO(第3回 演習): tools.py に make_quiz を作り、ここで登録しよう
+agent.tool_plain(tools.make_quiz)
+# 保存は取り消しにくい操作なので、実行の前に利用者の承認を挟む
+agent.tool_plain(tools.save_learning_log, requires_approval=True)
 
 # 第5回: 使う MCP サーバーの設定ファイル。Claude Desktop や Cursor と同じ "mcpServers" 形式
 MCP_CONFIG = Path(__file__).resolve().parent / "mcp_servers.json"
@@ -97,6 +100,29 @@ def print_tools(target: Agent) -> None:
         print(f"  引数: {json.dumps(params, ensure_ascii=False)}")
 
 
+def run_with_approval(target: Agent, question: str, model, ask=input):
+    """承認が必要なツールが呼ばれたら、利用者に聞いてから続きを実行する。
+
+    承認待ち（DeferredToolRequests）が返っている間、呼び出しごとに ask で y/N を聞く。
+    結果（DeferredToolResults）とそれまでの会話（message_history）を渡して、もう一度実行する。
+    y 以外は断ったものとして扱い、ツールは実行されない。
+    """
+    result = target.run_sync(question, model=model)
+    while isinstance(result.output, DeferredToolRequests):
+        approvals = {}
+        for call in result.output.approvals:
+            print(f"\n[承認待ち] {call.tool_name}({call.args})")
+            ok = ask("実行してよいですか？ [y/N] ").strip().lower() in ("y", "yes")
+            approvals[call.tool_call_id] = True if ok else ToolDenied("利用者が実行を断りました")
+        result = target.run_sync(
+            message_history=result.all_messages(),
+            deferred_tool_results=DeferredToolResults(approvals=approvals),
+            usage=result.usage,  # 最初の実行の使用量を引き継ぎ、[usage] が全体の回数を示すようにする
+            model=model,
+        )
+    return result
+
+
 def print_trace(result) -> None:
     """どのツールが、どの引数で呼ばれ、何を返したかを表示する。"""
     print("\n--- trace ---")
@@ -128,7 +154,7 @@ def main() -> None:
     if args.mcp:
         print("[tools] MCP サーバー（app/mcp_servers.json）")
     try:
-        result = target.run_sync(args.question, model=build_model())
+        result = run_with_approval(target, args.question, build_model())
     except ModelHTTPError as e:
         print(api_error_message(e.status_code, str(e.body)[:200]))
         raise SystemExit(1)
