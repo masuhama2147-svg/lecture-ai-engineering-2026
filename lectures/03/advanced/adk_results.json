@@ -1,0 +1,268 @@
+{
+  "adk_version": "2.14.0",
+  "model": "gemini-3.5-flash-lite",
+  "measured_at": "2026-11-09T13:31:27.003922+09:00",
+  "records": [
+    {
+      "question_id": "複数の用語",
+      "run": 1,
+      "status": 200,
+      "wall_s": 4.0,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "LoRA"
+          }
+        },
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "QLoRA"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1562,
+      "output_tokens": 180,
+      "thought_tokens": 0,
+      "answer": "LoRAとQLoRAの違いは以下のとおりです。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分を小さな低ランク行列（2つの行列の積）で表し、その部分だけを学習するPEFT手法です。学習パラメータを大幅に削減し、小さなファイルでアダプタを保存できます。\n* **QLoRA**: ベースモデルの重みを4ビットなどに量子化（低ビット化）してメモリ使用量をさらに節約したうえで、LoRAによる学習を行う手法です。これにより、より大きなモデルを小さなGPU環境でも扱えるようになります。\n\n関係する回：第2回",
+      "features": {
+        "searched": true,
+        "n_search_calls": 2,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "講座に固有",
+      "run": 1,
+      "status": 200,
+      "wall_s": 4.1,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "3レベル"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1151,
+      "output_tokens": 136,
+      "thought_tokens": 0,
+      "answer": "AIE2026の講座における「3レベル」とは、各回の宿題の難易度や取り組み方の構成のことです。\n\n具体的には以下の3段階に分かれており、受講生は**どれか1つ**に取り組めばその回の宿題完了となります（原則として採点は行われません）。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行（応用的な課題）\n\n（関係する回：第1回）",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": 3,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "用語集にない",
+      "run": 1,
+      "status": 200,
+      "wall_s": 4.0,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "最終課題"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1066,
+      "output_tokens": 52,
+      "thought_tokens": 0,
+      "answer": "用語集を確認しましたが、「最終課題」についての情報は用語集には掲載されていません。講座全体のシラバスや配布資料、あるいは最後の回の案内等をご確認ください。",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": false,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": true
+      }
+    },
+    {
+      "question_id": "複数の用語",
+      "run": 2,
+      "status": 200,
+      "wall_s": 3.9,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "LoRA"
+          }
+        },
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "QLoRA"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1562,
+      "output_tokens": 180,
+      "thought_tokens": 0,
+      "answer": "LoRAとQLoRAの違いは以下の通りです。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分を2つの小さな低ランク行列の積で表し、その部分だけを学習するPEFT（Parameter-Efficient Fine-Tuning）手法です。学習パラメータや保存ファイルを少なく抑えられます。\n* **QLoRA**: ベースモデルの重みを4ビットなどに量子化（Quantization）してメモリ消費を大幅に節約した状態で、LoRAによる学習を行う手法です。これにより、より大きなモデルを比較的小さなGPUでも効率よく扱えるようになります。\n\n関連回：第2回",
+      "features": {
+        "searched": true,
+        "n_search_calls": 2,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "講座に固有",
+      "run": 2,
+      "status": 200,
+      "wall_s": 3.8,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "3レベル"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1151,
+      "output_tokens": 182,
+      "thought_tokens": 0,
+      "answer": "AIE2026の宿題における「3レベル」とは、宿題の取り組みやすさや難易度に応じた**「基礎」「実装」「発展」の3段階の構成**のことです。\n\n* **基礎**: 講義内容の確認（基本知識や理解度をチェックする問題）\n* **実装**: 自分でコードを書く（実際に手を動かして実装する課題）\n* **発展**: 調査や試行（より踏み込んだ調査や応用的なチャレンジ課題）\n\nこれら3つのレベルの中から、**いずれか1つに取り組めばその回の宿題は完了**となります。原則として採点は行われませんので、ご自身の理解度や目的に合わせて選んでみてください。\n\n関連する回：第1回",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": 3,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "用語集にない",
+      "run": 2,
+      "status": 200,
+      "wall_s": 3.7,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "最終課題"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1066,
+      "output_tokens": 55,
+      "thought_tokens": 0,
+      "answer": "用語集には「最終課題」という言葉は登録されていないため、配点についての詳細な情報は持ち合わせておりません。講座のシラバスや公式の案内をご確認ください。",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": false,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": true
+      }
+    },
+    {
+      "question_id": "複数の用語",
+      "run": 3,
+      "status": 200,
+      "wall_s": 4.4,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "LoRA"
+          }
+        },
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "QLoRA"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1562,
+      "output_tokens": 219,
+      "thought_tokens": 0,
+      "answer": "**LoRA**と**QLoRA**の違いは、ベースモデルの重みをそのまま扱うか、量子化してメモリを節約するかという点にあります。\n\n* **LoRA（Low-Rank Adaptation）**\n  事前学習済みの重みは固定したまま、重みの更新分を小さな低ランク行列で近似し、その部分だけを学習するPEFT（Parameter-Efficient Fine-Tuning）手法です。学習パラメータや保存するファイルサイズを大幅に削減できます。\n\n* **QLoRA（Quantized LoRA）**\n  ベースモデルの重みを4ビットなどに量子化（Quantization）してメモリをさらに節約した状態で、LoRAによるファインチューニングを行う手法です。これにより、より大きなモデルを比較的小さなGPUでも効率よく扱えるようになります。\n\n関係する回：第2回",
+      "features": {
+        "searched": true,
+        "n_search_calls": 2,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "講座に固有",
+      "run": 3,
+      "status": 200,
+      "wall_s": 4.0,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "3レベル"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1151,
+      "output_tokens": 131,
+      "thought_tokens": 0,
+      "answer": "AIE2026の講座における「3レベル」とは、各回の宿題の構成を表す以下の3つの段階のことです。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行\n\nどれか1つに取り組めばその回の宿題は完了となり、原則として採点は行われません。ご自身の学習の進み具合に合わせて選んで取り組むことができます。\n\n（関連する回：第1回）",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": true,
+        "has_quiz": false,
+        "key_phrases": 3,
+        "says_not_in_glossary": false
+      }
+    },
+    {
+      "question_id": "用語集にない",
+      "run": 3,
+      "status": 200,
+      "wall_s": 4.4,
+      "tool_calls": [
+        {
+          "tool": "search_glossary",
+          "args": {
+            "query": "最終課題"
+          }
+        }
+      ],
+      "requests": 2,
+      "input_tokens": 1066,
+      "output_tokens": 61,
+      "thought_tokens": 0,
+      "answer": "AIエンジニアリング講座（AIE2026）の用語集には「最終課題」についての情報は見つかりませんでした。詳細については講師や配布されているシラバス・コースガイドをご確認ください。",
+      "features": {
+        "searched": true,
+        "n_search_calls": 1,
+        "ends_with_lecture": false,
+        "has_quiz": false,
+        "key_phrases": null,
+        "says_not_in_glossary": true
+      }
+    }
+  ]
+}
