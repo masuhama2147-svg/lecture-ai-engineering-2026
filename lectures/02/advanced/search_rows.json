@@ -1,0 +1,640 @@
+{
+  "質問をそのまま": [
+    {
+      "category": "同一表現",
+      "question": "「LoRA」とは何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA"
+      ],
+      "n_hits": 1,
+      "term_id": "lora"
+    },
+    {
+      "category": "同一表現",
+      "question": "「fork」とは何ですか？",
+      "top1": "fork",
+      "terms": [
+        "fork"
+      ],
+      "n_hits": 1,
+      "term_id": "fork"
+    },
+    {
+      "category": "同一表現",
+      "question": "「レート制限」とは何ですか？",
+      "top1": "レート制限",
+      "terms": [
+        "レート制限"
+      ],
+      "n_hits": 1,
+      "term_id": "rate-limit"
+    },
+    {
+      "category": "同一表現",
+      "question": "「エージェントループ」とは何ですか？",
+      "top1": "AIエージェント",
+      "terms": [
+        "AIエージェント",
+        "エージェントループ"
+      ],
+      "n_hits": 2,
+      "term_id": "agent-loop"
+    },
+    {
+      "category": "同一表現",
+      "question": "「MCPサーバー」とは何ですか？",
+      "top1": "MCP（Model Context Protocol）",
+      "terms": [
+        "MCP（Model Context Protocol）",
+        "MCPサーバー"
+      ],
+      "n_hits": 2,
+      "term_id": "mcp-server"
+    },
+    {
+      "category": "同一表現",
+      "question": "「過学習」とは何ですか？",
+      "top1": "過学習",
+      "terms": [
+        "過学習"
+      ],
+      "n_hits": 1,
+      "term_id": "overfitting"
+    },
+    {
+      "category": "同一表現",
+      "question": "「APIキー」とは何ですか？",
+      "top1": "API",
+      "terms": [
+        "API",
+        "APIキー"
+      ],
+      "n_hits": 2,
+      "term_id": "api-key"
+    },
+    {
+      "category": "同一表現",
+      "question": "「構造化出力」とは何ですか？",
+      "top1": "構造化出力",
+      "terms": [
+        "構造化出力"
+      ],
+      "n_hits": 1,
+      "term_id": "structured-output"
+    },
+    {
+      "category": "同一表現",
+      "question": "「ハルシネーション」とは何ですか？",
+      "top1": "ハルシネーション",
+      "terms": [
+        "ハルシネーション"
+      ],
+      "n_hits": 1,
+      "term_id": "hallucination"
+    },
+    {
+      "category": "同一表現",
+      "question": "「量子化」とは何ですか？",
+      "top1": "量子化",
+      "terms": [
+        "量子化"
+      ],
+      "n_hits": 1,
+      "term_id": "quantization"
+    },
+    {
+      "category": "言い換え",
+      "question": "LoRAって何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA"
+      ],
+      "n_hits": 1,
+      "term_id": "lora"
+    },
+    {
+      "category": "言い換え",
+      "question": "FTって何のことですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": "fine-tuning"
+    },
+    {
+      "category": "言い換え",
+      "question": "429エラーはなぜ出るのですか？",
+      "top1": "レート制限",
+      "terms": [
+        "レート制限"
+      ],
+      "n_hits": 1,
+      "term_id": "rate-limit"
+    },
+    {
+      "category": "言い換え",
+      "question": "agent loop を教えてください",
+      "top1": "AIエージェント",
+      "terms": [
+        "AIエージェント",
+        "エージェントループ"
+      ],
+      "n_hits": 2,
+      "term_id": "agent-loop"
+    },
+    {
+      "category": "言い換え",
+      "question": "Codespacesのシークレットの意味は？",
+      "top1": "GitHub Codespaces",
+      "terms": [
+        "GitHub Codespaces",
+        "Codespaces secret"
+      ],
+      "n_hits": 2,
+      "term_id": "codespaces-secret"
+    },
+    {
+      "category": "言い換え",
+      "question": "pre-training の意味を教えて",
+      "top1": "事前学習",
+      "terms": [
+        "事前学習"
+      ],
+      "n_hits": 1,
+      "term_id": "pretraining"
+    },
+    {
+      "category": "言い換え",
+      "question": "Function calling とは？",
+      "top1": "ツール（Tool use / Function calling）",
+      "terms": [
+        "ツール（Tool use / Function calling）"
+      ],
+      "n_hits": 1,
+      "term_id": "tool"
+    },
+    {
+      "category": "言い換え",
+      "question": "stdio や Streamable HTTP とは何ですか？",
+      "top1": "トランスポート（stdio・Streamable HTTP）",
+      "terms": [
+        "トランスポート（stdio・Streamable HTTP）"
+      ],
+      "n_hits": 1,
+      "term_id": "mcp-transport"
+    },
+    {
+      "category": "言い換え",
+      "question": "宿題レベルって何ですか？",
+      "top1": "宿題の3レベル",
+      "terms": [
+        "宿題の3レベル"
+      ],
+      "n_hits": 1,
+      "term_id": "homework-levels"
+    },
+    {
+      "category": "言い換え",
+      "question": "開始タグとは？",
+      "top1": "lecNN-start タグ",
+      "terms": [
+        "lecNN-start タグ"
+      ],
+      "n_hits": 1,
+      "term_id": "lec-start-tag"
+    },
+    {
+      "category": "言い換え",
+      "question": "HITL とは？",
+      "top1": "Human-in-the-loop",
+      "terms": [
+        "Human-in-the-loop"
+      ],
+      "n_hits": 1,
+      "term_id": "human-in-the-loop"
+    },
+    {
+      "category": "言い換え",
+      "question": "オーバーフィッティングを説明してください",
+      "top1": "過学習",
+      "terms": [
+        "過学習"
+      ],
+      "n_hits": 1,
+      "term_id": "overfitting"
+    },
+    {
+      "category": "一般語",
+      "question": "RLHFとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Transformerとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "RAGとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Dockerとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Mixture of Experts（MoE）とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "「lec99-start タグ」とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「ハーネスマネージャー」とは何ですか？",
+      "top1": "ハーネス",
+      "terms": [
+        "ハーネス"
+      ],
+      "n_hits": 1,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026で使う「QLoRAタグ」とは何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA",
+        "QLoRA"
+      ],
+      "n_hits": 2,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「最終課題の配点」はどうなっていますか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    }
+  ],
+  "語だけ": [
+    {
+      "category": "同一表現",
+      "question": "「LoRA」とは何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA",
+        "ランク（LoRAのr）",
+        "QLoRA"
+      ],
+      "n_hits": 3,
+      "term_id": "lora"
+    },
+    {
+      "category": "同一表現",
+      "question": "「fork」とは何ですか？",
+      "top1": "fork",
+      "terms": [
+        "fork",
+        "Codespaces secret",
+        "プルリクエスト（PR）"
+      ],
+      "n_hits": 3,
+      "term_id": "fork"
+    },
+    {
+      "category": "同一表現",
+      "question": "「レート制限」とは何ですか？",
+      "top1": "レート制限",
+      "terms": [
+        "レート制限",
+        "トークン",
+        "エージェントループ"
+      ],
+      "n_hits": 3,
+      "term_id": "rate-limit"
+    },
+    {
+      "category": "同一表現",
+      "question": "「エージェントループ」とは何ですか？",
+      "top1": "エージェントループ",
+      "terms": [
+        "エージェントループ",
+        "AIエージェント"
+      ],
+      "n_hits": 2,
+      "term_id": "agent-loop"
+    },
+    {
+      "category": "同一表現",
+      "question": "「MCPサーバー」とは何ですか？",
+      "top1": "MCPサーバー",
+      "terms": [
+        "MCPサーバー",
+        "MCP（Model Context Protocol）",
+        "MCPクライアント"
+      ],
+      "n_hits": 3,
+      "term_id": "mcp-server"
+    },
+    {
+      "category": "同一表現",
+      "question": "「過学習」とは何ですか？",
+      "top1": "過学習",
+      "terms": [
+        "過学習",
+        "エポック"
+      ],
+      "n_hits": 2,
+      "term_id": "overfitting"
+    },
+    {
+      "category": "同一表現",
+      "question": "「APIキー」とは何ですか？",
+      "top1": "APIキー",
+      "terms": [
+        "APIキー",
+        "API",
+        "環境変数"
+      ],
+      "n_hits": 3,
+      "term_id": "api-key"
+    },
+    {
+      "category": "同一表現",
+      "question": "「構造化出力」とは何ですか？",
+      "top1": "構造化出力",
+      "terms": [
+        "構造化出力"
+      ],
+      "n_hits": 1,
+      "term_id": "structured-output"
+    },
+    {
+      "category": "同一表現",
+      "question": "「ハルシネーション」とは何ですか？",
+      "top1": "ハルシネーション",
+      "terms": [
+        "ハルシネーション"
+      ],
+      "n_hits": 1,
+      "term_id": "hallucination"
+    },
+    {
+      "category": "同一表現",
+      "question": "「量子化」とは何ですか？",
+      "top1": "量子化",
+      "terms": [
+        "量子化",
+        "QLoRA"
+      ],
+      "n_hits": 2,
+      "term_id": "quantization"
+    },
+    {
+      "category": "言い換え",
+      "question": "LoRAって何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA",
+        "ランク（LoRAのr）",
+        "QLoRA"
+      ],
+      "n_hits": 3,
+      "term_id": "lora"
+    },
+    {
+      "category": "言い換え",
+      "question": "FTって何のことですか？",
+      "top1": "ファインチューニング",
+      "terms": [
+        "ファインチューニング",
+        "教師ありファインチューニング（SFT）",
+        "PEFT"
+      ],
+      "n_hits": 3,
+      "term_id": "fine-tuning"
+    },
+    {
+      "category": "言い換え",
+      "question": "429エラーはなぜ出るのですか？",
+      "top1": "レート制限",
+      "terms": [
+        "レート制限"
+      ],
+      "n_hits": 1,
+      "term_id": "rate-limit"
+    },
+    {
+      "category": "言い換え",
+      "question": "agent loop を教えてください",
+      "top1": "エージェントループ",
+      "terms": [
+        "エージェントループ",
+        "AIエージェント"
+      ],
+      "n_hits": 2,
+      "term_id": "agent-loop"
+    },
+    {
+      "category": "言い換え",
+      "question": "Codespacesのシークレットの意味は？",
+      "top1": "Codespaces secret",
+      "terms": [
+        "Codespaces secret",
+        "GitHub Codespaces"
+      ],
+      "n_hits": 2,
+      "term_id": "codespaces-secret"
+    },
+    {
+      "category": "言い換え",
+      "question": "pre-training の意味を教えて",
+      "top1": "事前学習",
+      "terms": [
+        "事前学習"
+      ],
+      "n_hits": 1,
+      "term_id": "pretraining"
+    },
+    {
+      "category": "言い換え",
+      "question": "Function calling とは？",
+      "top1": "ツール（Tool use / Function calling）",
+      "terms": [
+        "ツール（Tool use / Function calling）"
+      ],
+      "n_hits": 1,
+      "term_id": "tool"
+    },
+    {
+      "category": "言い換え",
+      "question": "stdio や Streamable HTTP とは何ですか？",
+      "top1": "トランスポート（stdio・Streamable HTTP）",
+      "terms": [
+        "トランスポート（stdio・Streamable HTTP）"
+      ],
+      "n_hits": 1,
+      "term_id": "mcp-transport"
+    },
+    {
+      "category": "言い換え",
+      "question": "宿題レベルって何ですか？",
+      "top1": "宿題の3レベル",
+      "terms": [
+        "宿題の3レベル"
+      ],
+      "n_hits": 1,
+      "term_id": "homework-levels"
+    },
+    {
+      "category": "言い換え",
+      "question": "開始タグとは？",
+      "top1": "lecNN-start タグ",
+      "terms": [
+        "lecNN-start タグ"
+      ],
+      "n_hits": 1,
+      "term_id": "lec-start-tag"
+    },
+    {
+      "category": "言い換え",
+      "question": "HITL とは？",
+      "top1": "Human-in-the-loop",
+      "terms": [
+        "Human-in-the-loop"
+      ],
+      "n_hits": 1,
+      "term_id": "human-in-the-loop"
+    },
+    {
+      "category": "言い換え",
+      "question": "オーバーフィッティングを説明してください",
+      "top1": "過学習",
+      "terms": [
+        "過学習"
+      ],
+      "n_hits": 1,
+      "term_id": "overfitting"
+    },
+    {
+      "category": "一般語",
+      "question": "RLHFとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Transformerとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "RAGとは何ですか？",
+      "top1": "ファインチューニング",
+      "terms": [
+        "ファインチューニング"
+      ],
+      "n_hits": 1,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Dockerとは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "一般語",
+      "question": "Mixture of Experts（MoE）とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「宿題の5レベル」とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "「lec99-start タグ」とは何ですか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「ハーネスマネージャー」とは何ですか？",
+      "top1": "ハーネス",
+      "terms": [
+        "ハーネス"
+      ],
+      "n_hits": 1,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026で使う「QLoRAタグ」とは何ですか？",
+      "top1": "LoRA",
+      "terms": [
+        "LoRA",
+        "QLoRA"
+      ],
+      "n_hits": 2,
+      "term_id": null
+    },
+    {
+      "category": "存在しない",
+      "question": "AIE2026の「最終課題の配点」はどうなっていますか？",
+      "top1": null,
+      "terms": [],
+      "n_hits": 0,
+      "term_id": null
+    }
+  ]
+}

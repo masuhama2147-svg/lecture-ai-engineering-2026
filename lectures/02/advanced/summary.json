@@ -1,0 +1,192 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "device": "mps",
+  "machine": "arm64 / macOS-26.2-arm64-arm-64bit",
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.15.0"
+  },
+  "train": {
+    "n_examples": 116,
+    "epochs": 5,
+    "steps": 75,
+    "seconds": 61,
+    "final_loss": 0.349068284034729,
+    "log_history": [
+      {
+        "loss": 3.2723461151123048,
+        "grad_norm": 3.880103349685669,
+        "learning_rate": 0.00019906859460363307,
+        "entropy": 2.973413109779358,
+        "num_tokens": 6095.0,
+        "mean_token_accuracy": 0.4331755727529526,
+        "epoch": 0.6896551724137931,
+        "step": 10
+      },
+      {
+        "loss": 2.2145008087158202,
+        "grad_norm": 3.0889580249786377,
+        "learning_rate": 0.00018298852919990252,
+        "entropy": 2.4992205971165706,
+        "num_tokens": 11783.0,
+        "mean_token_accuracy": 0.5820159708198748,
+        "epoch": 1.3448275862068966,
+        "step": 20
+      },
+      {
+        "loss": 1.6947923660278321,
+        "grad_norm": 4.463970184326172,
+        "learning_rate": 0.00015000000000000001,
+        "entropy": 2.042901453218962,
+        "num_tokens": 17488.0,
+        "mean_token_accuracy": 0.6508596947318629,
+        "epoch": 2.0,
+        "step": 30
+      },
+      {
+        "loss": 1.0570826530456543,
+        "grad_norm": 3.834939479827881,
+        "learning_rate": 0.0001068242413364671,
+        "entropy": 1.584707647562027,
+        "num_tokens": 23504.0,
+        "mean_token_accuracy": 0.7800703406333923,
+        "epoch": 2.689655172413793,
+        "step": 40
+      },
+      {
+        "loss": 0.6804094314575195,
+        "grad_norm": 3.3124496936798096,
+        "learning_rate": 6.225808042473858e-05,
+        "entropy": 1.1870266606933193,
+        "num_tokens": 29173.0,
+        "mean_token_accuracy": 0.864734244974036,
+        "epoch": 3.344827586206897,
+        "step": 50
+      },
+      {
+        "loss": 0.5096789360046386,
+        "grad_norm": 3.7407193183898926,
+        "learning_rate": 2.5381631415231454e-05,
+        "entropy": 1.0339448922558834,
+        "num_tokens": 34976.0,
+        "mean_token_accuracy": 0.9075487381533572,
+        "epoch": 4.0,
+        "step": 60
+      },
+      {
+        "loss": 0.349068284034729,
+        "grad_norm": 2.391706943511963,
+        "learning_rate": 3.7082712652200867e-06,
+        "entropy": 0.8227280169725418,
+        "num_tokens": 40864.0,
+        "mean_token_accuracy": 0.9483051717281341,
+        "epoch": 4.689655172413794,
+        "step": 70
+      },
+      {
+        "train_runtime": 60.67,
+        "train_samples_per_second": 9.56,
+        "train_steps_per_second": 1.236,
+        "total_flos": 161751767192064.0,
+        "train_loss": 1.3314219760894774,
+        "entropy": 0.8509593341085646,
+        "num_tokens": 43720.0,
+        "mean_token_accuracy": 0.9321046206686232,
+        "epoch": 5.0,
+        "step": 75
+      }
+    ]
+  },
+  "eval_questions": 32,
+  "recall_threshold": 0.5,
+  "max_new_tokens": 200,
+  "before": {
+    "同一表現": {
+      "n": 10,
+      "mean_recall": 0.037,
+      "reproduced_rate": 0.0
+    },
+    "言い換え": {
+      "n": 12,
+      "mean_recall": 0.065,
+      "reproduced_rate": 0.0
+    },
+    "一般語": {
+      "n": 5,
+      "declined_rate": 0.0
+    },
+    "存在しない": {
+      "n": 5,
+      "declined_rate": 0.0
+    }
+  },
+  "after": {
+    "同一表現": {
+      "n": 10,
+      "mean_recall": 0.675,
+      "reproduced_rate": 0.8
+    },
+    "言い換え": {
+      "n": 12,
+      "mean_recall": 0.218,
+      "reproduced_rate": 0.167
+    },
+    "一般語": {
+      "n": 5,
+      "declined_rate": 0.0
+    },
+    "存在しない": {
+      "n": 5,
+      "declined_rate": 0.0
+    }
+  },
+  "search": {
+    "質問をそのまま": {
+      "同一表現": {
+        "n": 10,
+        "top1_correct_rate": 0.7,
+        "top3_contains_rate": 1.0
+      },
+      "言い換え": {
+        "n": 12,
+        "top1_correct_rate": 0.75,
+        "top3_contains_rate": 0.917
+      },
+      "一般語": {
+        "n": 5,
+        "declined_rate": 1.0
+      },
+      "存在しない": {
+        "n": 5,
+        "declined_rate": 0.6
+      }
+    },
+    "語だけ": {
+      "同一表現": {
+        "n": 10,
+        "top1_correct_rate": 1.0,
+        "top3_contains_rate": 1.0
+      },
+      "言い換え": {
+        "n": 12,
+        "top1_correct_rate": 1.0,
+        "top3_contains_rate": 1.0
+      },
+      "一般語": {
+        "n": 5,
+        "declined_rate": 0.8
+      },
+      "存在しない": {
+        "n": 5,
+        "declined_rate": 0.6
+      }
+    }
+  },
+  "eval_seconds": {
+    "before": 67.1,
+    "after": 22.4
+  },
+  "smoke": false
+}

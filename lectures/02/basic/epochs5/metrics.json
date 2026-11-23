@@ -1,0 +1,43 @@
+{
+  "device": "mps",
+  "machine": "arm64 / macOS-26.2-arm64-arm-64bit",
+  "train_seconds": 21,
+  "global_step": 10,
+  "epoch": 5.0,
+  "final_train_loss": 1.5784284591674804,
+  "mean_train_loss": 1.5784284591674804,
+  "valid_loss_after_training": 0.45615822076797485,
+  "trainable_params": "trainable params: 6,389,760 || all params: 758,782,784 || trainable%: 0.8421",
+  "log_history": [
+    {
+      "loss": 1.5784284591674804,
+      "grad_norm": 2.1713309288024902,
+      "learning_rate": 2.9289321881345254e-05,
+      "entropy": 1.8638964921236039,
+      "num_tokens": 17860.0,
+      "mean_token_accuracy": 0.6831928700208664,
+      "epoch": 5.0,
+      "step": 10
+    },
+    {
+      "train_runtime": 21.1662,
+      "train_samples_per_second": 3.307,
+      "train_steps_per_second": 0.472,
+      "total_flos": 55352062558464.0,
+      "train_loss": 1.5784284591674804,
+      "epoch": 5.0,
+      "step": 10
+    },
+    {
+      "eval_loss": 0.45615822076797485,
+      "eval_runtime": 0.5514,
+      "eval_samples_per_second": 12.694,
+      "eval_steps_per_second": 1.813,
+      "eval_entropy": 0.8966676592826843,
+      "eval_num_tokens": 17860.0,
+      "eval_mean_token_accuracy": 0.9012345671653748,
+      "epoch": 5.0,
+      "step": 10
+    }
+  ]
+}
